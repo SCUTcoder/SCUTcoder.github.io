@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeNavigation();
     initializeScrollAnimations();
     initializeFormValidation();
-    initializeParticleSystem();
     initializeResponsiveMenu();
     initializeTypingEffect();
-    initializeWallpaperToggle();
+    initializeMatrixRain();
+    initializeCodeParticles();
 });
 
 // 导航栏滚动效果
@@ -259,46 +259,110 @@ function showSuccessMessage() {
     }, 5000);
 }
 
-// 粒子系统
-function initializeParticleSystem() {
-    const heroSection = document.querySelector('.hero');
-    const particleCount = 20;
-
-    for (let i = 0; i < particleCount; i++) {
-        createParticle(heroSection);
+// Matrix Rain Effect (矩阵雨效果)
+function initializeMatrixRain() {
+    const canvas = document.getElementById('matrix-canvas');
+    if (!canvas) return;
+    
+    const ctx = canvas.getContext('2d');
+    
+    // 设置canvas尺寸
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    
+    // 字符集 - 使用编程相关的字符
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789@#$%^&*(){}[]<>/\\|~`';
+    const fontSize = 14;
+    const columns = canvas.width / fontSize;
+    
+    // 每列的Y位置
+    const drops = Array(Math.floor(columns)).fill(1);
+    
+    function draw() {
+        // 半透明黑色背景，产生拖尾效果
+        ctx.fillStyle = 'rgba(13, 17, 23, 0.05)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        
+        // 设置文字样式
+        ctx.fillStyle = '#39d353';
+        ctx.font = `${fontSize}px JetBrains Mono, monospace`;
+        
+        // 绘制字符
+        for (let i = 0; i < drops.length; i++) {
+            const text = chars[Math.floor(Math.random() * chars.length)];
+            const x = i * fontSize;
+            const y = drops[i] * fontSize;
+            
+            ctx.fillText(text, x, y);
+            
+            // 随机重置位置
+            if (y > canvas.height && Math.random() > 0.975) {
+                drops[i] = 0;
+            }
+            
+            drops[i]++;
+        }
     }
+    
+    // 启动动画
+    setInterval(draw, 33);
+    
+    // 窗口大小改变时调整canvas
+    window.addEventListener('resize', () => {
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+    });
 }
 
-// 创建粒子
-function createParticle(container) {
-    const particle = document.createElement('div');
-    particle.className = 'dynamic-particle';
-
-    // 随机大小
-    const size = Math.random() * 6 + 2;
-    particle.style.width = `${size}px`;
-    particle.style.height = `${size}px`;
-
-    // 随机位置
-    particle.style.left = `${Math.random() * 100}%`;
-    particle.style.top = `${Math.random() * 100}%`;
-
-    // 随机颜色
-    const colors = ['#00d4ff', '#ff0080', '#7928ca', '#00ff88'];
-    const color = colors[Math.floor(Math.random() * colors.length)];
-    particle.style.background = color;
-    particle.style.boxShadow = `0 0 ${size * 2}px ${color}`;
-
-    // 随机动画延迟
-    particle.style.animationDelay = `${Math.random() * 10}s`;
-
-    container.appendChild(particle);
-
-    // 动画结束后重新创建
-    particle.addEventListener('animationend', () => {
-        particle.remove();
-        setTimeout(() => createParticle(container), Math.random() * 10000);
-    });
+// Floating Code Particles (浮动代码片段)
+function initializeCodeParticles() {
+    const container = document.getElementById('code-particles');
+    if (!container) return;
+    
+    // 编程关键字和符号
+    const codeSnippets = [
+        'const', 'let', 'var', 'function', 'return', 'if', 'else',
+        'for', 'while', 'class', 'import', 'export', 'async', 'await',
+        '=>', '{}', '[]', '()', '==', '===', '!=', '&&', '||',
+        'git', 'npm', 'node', 'docker', 'k8s', 'api', 'http',
+        '0x', '0b', '&&', '||', '>>', '<<', '++', '--'
+    ];
+    
+    function createCodeParticle() {
+        const particle = document.createElement('div');
+        particle.className = 'code-particle';
+        particle.textContent = codeSnippets[Math.floor(Math.random() * codeSnippets.length)];
+        
+        // 随机位置
+        particle.style.left = Math.random() * 100 + '%';
+        particle.style.top = '100%';
+        
+        // 随机动画时长
+        const duration = 15 + Math.random() * 15;
+        particle.style.animationDuration = duration + 's';
+        
+        // 随机延迟
+        particle.style.animationDelay = Math.random() * 5 + 's';
+        
+        container.appendChild(particle);
+        
+        // 动画结束后移除
+        setTimeout(() => {
+            particle.remove();
+        }, (duration + 5) * 1000);
+    }
+    
+    // 初始创建一批粒子
+    for (let i = 0; i < 20; i++) {
+        setTimeout(() => createCodeParticle(), Math.random() * 3000);
+    }
+    
+    // 持续创建新粒子
+    setInterval(() => {
+        if (container.children.length < 30) {
+            createCodeParticle();
+        }
+    }, 2000);
 }
 
 // 响应式菜单
@@ -373,29 +437,6 @@ function initializeTypingEffect() {
     setTimeout(typeWriter, 1000);
 }
 
-// 壁纸切换功能
-function initializeWallpaperToggle() {
-    const toggle = document.getElementById('wallpaper-toggle');
-    if (!toggle) return;
-
-    // 从localStorage读取保存的状态
-    const savedState = localStorage.getItem('wallpaper-mode');
-    if (savedState === 'true') {
-        toggle.checked = true;
-        document.body.classList.add('wallpaper-mode');
-    }
-
-    // 监听切换事件
-    toggle.addEventListener('change', function() {
-        if (this.checked) {
-            document.body.classList.add('wallpaper-mode');
-            localStorage.setItem('wallpaper-mode', 'true');
-        } else {
-            document.body.classList.remove('wallpaper-mode');
-            localStorage.setItem('wallpaper-mode', 'false');
-        }
-    });
-}
 
 // 技能标签动画
 function animateSkillTags() {

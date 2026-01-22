@@ -11,20 +11,17 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- 背景装饰元素 -->
-    <div class="bg-decoration">
-        <div class="bg-circle bg-circle-1"></div>
-        <div class="bg-circle bg-circle-2"></div>
-        <div class="bg-circle bg-circle-3"></div>
-        <div class="bg-shape bg-shape-1"></div>
-        <div class="bg-shape bg-shape-2"></div>
-    </div>
+    <!-- Matrix Rain Effect -->
+    <canvas id="matrix-canvas"></canvas>
+    
+    <!-- Floating Code Particles -->
+    <div id="code-particles"></div>
     <!-- 导航栏 -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
-                <i class="fas fa-code"></i>
-                <span>章程技术主页</span>
+                <i class="fas fa-terminal"></i>
+                <span>~/zhangcheng</span>
             </div>
             <div class="nav-menu">
                 <a href="#hero" class="nav-link">首页</a>
@@ -37,13 +34,6 @@
                 <a href="#contact" class="nav-link">联系</a>
             </div>
             <div class="nav-controls">
-                <div class="wallpaper-toggle">
-                    <label class="toggle-switch">
-                        <input type="checkbox" id="wallpaper-toggle">
-                        <span class="toggle-slider"></span>
-                    </label>
-                    <span class="toggle-label">壁纸</span>
-                </div>
                 <div class="nav-toggle">
                     <span></span>
                     <span></span>
@@ -55,23 +45,18 @@
 
     <!-- Hero Section -->
     <section id="hero" class="hero">
-        <div class="hero-background">
-            <div class="particle" style="--delay: 0s;"></div>
-            <div class="particle" style="--delay: 1s;"></div>
-            <div class="particle" style="--delay: 2s;"></div>
-            <div class="particle" style="--delay: 3s;"></div>
-            <div class="particle" style="--delay: 4s;"></div>
-        </div>
         <div class="hero-content">
             <div class="hero-text">
                 <h1 class="hero-title">
                     <span class="gradient-text">章程</span>
                 </h1>
-                <div class="hero-subtitle">全技术栈软件开发工程师</div>
+                <div class="hero-subtitle">whoami: 全栈软件工程师</div>
                 <p class="hero-description">
-                    专注于高并发分布式系统、大数据处理与微服务架构的设计与工程实现，具备扎实的计算机科学理论基础与系统化工程能力。
+                    > 专注于高并发分布式系统、大数据处理与微服务架构
                     <br>
-                    目前就职于国内头部互联网大厂，从事核心后端系统研发工作，在复杂业务架构、系统性能调优及稳定性保障等方面积累了丰富的一线工业实践经验。
+                    > 在复杂业务架构、系统性能调优及稳定性保障方面具有丰富实践经验
+                    <br>
+                    > cat /dev/interests: Backend | AI | Cloud Architecture
                 </p>
                 <div class="hero-stats">
                     <div class="stat">
@@ -592,11 +577,11 @@
         <div class="container">
             <div class="footer-content">
                 <div class="footer-logo">
-                    <i class="fas fa-code"></i>
-                    <span>章程技术主页</span>
+                    <i class="fas fa-terminal"></i>
+                    <span>~/zhangcheng</span>
                 </div>
                 <p class="footer-text">
-                    © 2024 章程. 致力于分布式系统与后端技术创新。
+                    © 2024-2026 章程 | Built with ❤️ and ☕
                 </p>
                 <div class="footer-links">
                     <a href="#hero">首页</a>
