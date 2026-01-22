@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>章程技术主页 - 美团后端开发工程师</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- 背景装饰元素 -->
+    <div class="bg-decoration">
+        <div class="bg-circle bg-circle-1"></div>
+        <div class="bg-circle bg-circle-2"></div>
+        <div class="bg-circle bg-circle-3"></div>
+        <div class="bg-shape bg-shape-1"></div>
+        <div class="bg-shape bg-shape-2"></div>
+    </div>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-code"></i>
+                <span>章程技术主页</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#hero" class="nav-link">首页</a>
+                <a href="#about" class="nav-link">关于</a>
+                <a href="#education" class="nav-link">教育</a>
+                <a href="#skills" class="nav-link">技能</a>
+                <a href="#experience" class="nav-link">经验</a>
+                <a href="#projects" class="nav-link">项目</a>
+                <a href="#research" class="nav-link">研究</a>
+                <a href="#contact" class="nav-link">联系</a>
+            </div>
+            <div class="nav-controls">
+                <div class="wallpaper-toggle">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="wallpaper-toggle">
+                        <span class="toggle-slider"></span>
+                    </label>
+                    <span class="toggle-label">壁纸</span>
+                </div>
+                <div class="nav-toggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+        <div class="hero-background">
+            <div class="particle" style="--delay: 0s;"></div>
+            <div class="particle" style="--delay: 1s;"></div>
+            <div class="particle" style="--delay: 2s;"></div>
+            <div class="particle" style="--delay: 3s;"></div>
+            <div class="particle" style="--delay: 4s;"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="gradient-text">章程</span>
+                </h1>
+                <div class="hero-subtitle">全技术栈软件开发工程师</div>
+                <p class="hero-description">
+                    专注于高并发分布式系统、大数据处理与微服务架构的设计与工程实现，具备扎实的计算机科学理论基础与系统化工程能力。
+                    <br>
+                    目前就职于国内头部互联网大厂，从事核心后端系统研发工作，在复杂业务架构、系统性能调优及稳定性保障等方面积累了丰富的一线工业实践经验。
+                </p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">2+</div>
+                        <div class="stat-label">年经验</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">项目</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">5+</div>
+                        <div class="stat-label">论文</div>
+                    </div>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">
+                        <i class="fas fa-envelope"></i>
+                        联系我
+                    </a>
+                    <a href="#projects" class="btn btn-secondary">
+                        <i class="fas fa-project-diagram"></i>
+                        查看项目
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="profile-container">
+                    <div class="profile-glow"></div>
+                    <div class="profile-avatar">
+                        <img src="照片.jpg" alt="章程" class="profile-photo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">关于我</h2>
+                <p class="section-subtitle">从材料科学到AI系统的转型之旅</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        我是章程，目前在美团担任后端开发工程师。
+                        拥有华南理工大学材料科学与工程的本科背景，正在香港中文大学攻读信息工程硕士学位。
+                    </p>
+                    <p>
+                        我的职业生涯始于材料科学的学术研究，后来转向计算机科学领域。
+                        在互联网行业的快速发展中，我专注于高并发分布式系统和大数据处理技术。
+                        现在，我致力于构建高可用、高性能的后端服务，为亿级用户提供优质的互联网体验。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">教育背景</h2>
+                <p class="section-subtitle">学术与专业能力培养</p>
+            </div>
+            <div class="education-cards">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>硕士</h3>
+                        <p class="education-school">香港中文大学（海外世界 Top30）</p>
+                        <p class="education-major">信息工程</p>
+                        <p class="education-year">2025.8 – 2026.7</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>本科</h3>
+                        <p class="education-school">华南理工大学（985）</p>
+                        <p class="education-major">高分子材料工程</p>
+                        <p class="education-year">2021.9 – 2025.7</p>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>辅修</h3>
+                        <p class="education-school">华南理工大学（985）</p>
+                        <p class="education-major">计算机科学与技术（第二学位）</p>
+                        <p class="education-year">2021.9 – 2025.7</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">技术技能</h2>
+                <p class="section-subtitle">全栈技术栈与AI系统专长</p>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        后端技术
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag expert">Python</span>
+                        <span class="skill-tag expert">Go</span>
+                        <span class="skill-tag expert">Rust</span>
+                        <span class="skill-tag advanced">Java</span>
+                        <span class="skill-tag advanced">C++</span>
+                        <span class="skill-tag advanced">Node.js</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-brain"></i>
+                        AI & 机器学习
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag expert">TensorFlow</span>
+                        <span class="skill-tag expert">PyTorch</span>
+                        <span class="skill-tag advanced">Transformers</span>
+                        <span class="skill-tag advanced">CUDA</span>
+                        <span class="skill-tag intermediate">Deep Learning</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-cloud"></i>
+                        云架构
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag expert">AWS</span>
+                        <span class="skill-tag expert">Kubernetes</span>
+                        <span class="skill-tag advanced">Docker</span>
+                        <span class="skill-tag advanced">Terraform</span>
+                        <span class="skill-tag advanced">Prometheus</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-database"></i>
+                        数据存储
+                    </h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag expert">PostgreSQL</span>
+                        <span class="skill-tag expert">Redis</span>
+                        <span class="skill-tag advanced">MongoDB</span>
+                        <span class="skill-tag advanced">Elasticsearch</span>
+                        <span class="skill-tag intermediate">Cassandra</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">工作经验</h2>
+                <p class="section-subtitle">工业界实践与技术成长</p>
+            </div>
+            <div class="experience-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>深圳空间漫步 - Golang 后端开发实习生</h3>
+                                <span class="experience-period">2025.8 – 至今</span>
+                            </div>
+                            <p class="experience-company">深圳空间漫步</p>
+                            <ul class="experience-responsibilities">
+                                <li><strong>数据管线传输开发：</strong>负责数字人实时对话后台管线开发，通过将TTS的音频数据与音频数据异步传输优化，同时并行向客户端调用方和Driven模型调用方传输音频数据，让对话回复加载时间更短，提升用户端体验</li>
+                                <li><strong>流式传输优化：</strong>实现LLM数据流式传输给TTS服务，再进一步流式传输给Driven服务，最终Driven不断增量响应关键帧数据给客户端调用方，减少了客户端在用户说话到视频生成的响应时间</li>
+                                <li><strong>异步处理架构：</strong>设计并实现多服务间的异步数据传输机制，优化数据流转效率，显著降低端到端延迟</li>
+                                <li><strong>性能优化：</strong>通过流式处理和并行传输技术，将数字人对话系统的整体响应时间优化40%以上，提升用户体验</li>
+                            </ul>
+                            <div class="experience-tech">
+                                <span>Golang</span>
+                                <span>流式处理</span>
+                                <span>TTS</span>
+                                <span>LLM</span>
+                                <span>异步传输</span>
+                                <span>Driven</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>美团 - Java 后端开发实习生</h3>
+                                <span class="experience-period">2025.3 – 2025.8</span>
+                            </div>
+                            <p class="experience-company">美团到店事业群</p>
+                            <ul class="experience-responsibilities">
+                                <li><strong>大数据流处理开发：</strong>基于 Flink 搭建实时流处理链路，实现亿级日志数据的实时采集、传输与持久化。同时实现 Druid 与 Doris 双写对比，为后续大数据查询优化提供平台能力</li>
+                                <li><strong>数据库性能优化：</strong>对线索平台核心数据处理流程进行线上化改造，将原本依赖 Hive 的离线批处理任务拆解并迁移至 RDS 关系数据库任务。通过设计数据表冗余字段、优化分片策略、分批异步拉取上游数据等技术手段，任务执行时间由 2 小时缩短至 20 分钟以内</li>
+                                <li><strong>查询性能优化：</strong>优化 SQL 执行计划与索引结构，采用按日期分片的倒排索引，将 Pivot 平台复杂组合查询的平均响应时间从约 20 秒甚至卡死降至 5 秒以内</li>
+                                <li>运营人员可直接在平台完成高产能 / 高供给数据运营，自动报出数据覆盖 90%+ 的需求</li>
+                            </ul>
+                            <div class="experience-tech">
+                                <span>Java</span>
+                                <span>Flink</span>
+                                <span>MySQL</span>
+                                <span>Druid</span>
+                                <span>Doris</span>
+                                <span>Hive</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="experience-card">
+                            <div class="experience-header">
+                                <h3>携程 - 后端开发实习生</h3>
+                                <span class="experience-period">2024.7 – 2024.12</span>
+                            </div>
+                            <p class="experience-company">携程旅行网</p>
+                            <ul class="experience-responsibilities">
+                                <li><strong>酒店预订系统优化：</strong>参与酒店预订核心业务流程的后端服务开发，优化订单处理流程，提升系统并发处理能力</li>
+                                <li><strong>分布式缓存优化：</strong>针对高并发场景下的缓存热点问题，设计并实现分布式缓存预热策略，有效降低缓存穿透和雪崩风险，提升系统响应速度</li>
+                                <li><strong>API性能优化：</strong>通过数据库查询优化、索引重构和连接池调优，将核心API接口响应时间优化30%以上，支持更高QPS的并发请求</li>
+                                <li><strong>微服务架构实践：</strong>参与Spring Cloud微服务架构的改造工作，学习服务治理、配置管理和服务发现等核心技术，积累分布式系统开发经验</li>
+                            </ul>
+                            <div class="experience-tech">
+                                <span>Java</span>
+                                <span>Spring Boot</span>
+                                <span>Spring Cloud</span>
+                                <span>MySQL</span>
+                                <span>Redis</span>
+                                <span>Kafka</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">代表项目</h2>
+                <p class="section-subtitle">技术创新与系统架构实践</p>
+            </div>
+            <div class="projects-grid">
+                <a href="https://github.com/SCUTcoder" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>美团外卖订单系统</h3>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Spring Boot</span>
+                                <span>MySQL</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            美团外卖核心订单处理系统，支持高并发订单创建、状态流转和配送跟踪。
+                            实现了订单分库分表、缓存优化和异步消息处理，确保系统高可用。
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">5000+</span>
+                                <span class="metric-label">QPS</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">99.99%</span>
+                                <span class="metric-label">可用性</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-link">
+                                <i class="fab fa-github"></i>
+                                查看源码
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/SCUTcoder" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>HGTimer 定时微服务</h3>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Spring Boot</span>
+                                <span>MySQL</span>
+                                <span>Redis</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            基于 Java + Spring Boot 实现的高并发定时 / 延时任务调度系统。
+                            支持任务增删查改、异常重试与失败补偿。采用 MySQL + Redis 双存储策略，使用 Redisson 实现分布式锁解决调度冲突。
+                            通过 Redis ZSet 管理定时 / 延时队列，减少锁竞争，实现秒级定时任务精准触发。
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">1300+</span>
+                                <span class="metric-label">QPS</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">秒级</span>
+                                <span class="metric-label">精准触发</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-link">
+                                <i class="fab fa-github"></i>
+                                查看源码
+                            </span>
+                        </div>
+                    </div>
+                </a>
+                <a href="https://github.com/SCUTcoder" target="_blank" class="project-card-link">
+                    <div class="project-card">
+                        <div class="project-header">
+                            <h3>分布式配置中心</h3>
+                            <div class="project-tech">
+                                <span>Java</span>
+                                <span>Zookeeper</span>
+                                <span>Netty</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            自研的分布式配置管理系统，支持微服务架构下的配置动态更新。
+                            实现了配置版本控制、灰度发布和实时推送，确保配置变更的稳定性和可靠性。
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric">
+                                <span class="metric-value">100+</span>
+                                <span class="metric-label">接入服务</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">99.999%</span>
+                                <span class="metric-label">数据一致性</span>
+                            </div>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-link">
+                                <i class="fab fa-github"></i>
+                                查看源码
+                            </span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Research Section -->
+    <section id="research" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">研究成果</h2>
+                <p class="section-subtitle">学术论文与技术贡献</p>
+            </div>
+            <div class="research-grid">
+                <a href="https://ieeexplore.ieee.org/document/10442157" target="_blank" class="research-card-link">
+                    <div class="research-card">
+                        <div class="research-type">会议论文</div>
+                        <h3>蔬菜商品智能定价与补货模型研究</h3>
+                        <p class="research-venue">MAAI, 2023.11 – 2023.12</p>
+                        <p class="research-abstract">
+                            <strong>算法设计：</strong>基于模拟退火与贪心算法构建数学优化模型，设计温度衰减与接受概率函数，保证算法收敛并跳出局部最优。
+                            <strong>模型测试与优化：</strong>进行鲁棒性与灵敏性分析，多场景仿真测试需求波动与价格弹性，统计评估模型稳定性，调整关键参数提升模型可靠性。
+                        </p>
+                        <div class="research-metrics">
+                            <span class="citation">第一作者</span>
+                            <span class="impact">MAAI</span>
+                        </div>
+                        <p class="research-paper">《Computerized Intelligent Pricing and Replenishment Model for Vegetable Commodities Based on Greedy Algorithm》</p>
+                    </div>
+                </a>
+                <a href="https://ieeexplore.ieee.org/document/10823007" target="_blank" class="research-card-link">
+                    <div class="research-card">
+                        <div class="research-type">会议论文</div>
+                        <h3>基于 PCA 和分位数改进的 K-Means 聚类算法研究</h3>
+                        <p class="research-venue">ICAICA, 2023.6 – 2023.7</p>
+                        <p class="research-abstract">
+                            通过数据预处理与 PCA 降维，基于分位数的初始聚类中心优化，提升聚类准确率与收敛速度。
+                            算法改进显著提升了传统 K-Means 聚类算法的性能和稳定性。
+                        </p>
+                        <div class="research-metrics">
+                            <span class="citation">第一作者</span>
+                            <span class="impact">ICAICA</span>
+                        </div>
+                        <p class="research-paper">《Optimisation Research on K-Means Clustering Algorithm Based on PCA and Percentile Improvement》</p>
+                    </div>
+                </a>
+                <a href="https://www.sciencedirect.com/journal/surfaces-and-interfaces" target="_blank" class="research-card-link">
+                    <div class="research-card">
+                        <div class="research-type">期刊论文</div>
+                        <h3>超疏水材料制备与智能图像分类研究</h3>
+                        <p class="research-venue">Surfaces and Interfaces, 2022.6 – 2023.4</p>
+                        <p class="research-abstract">
+                            进行材料制备与性能测试，STM 图像采集与处理，基于 Vision Transformer 的图像分类模型，分类准确率 >95%。
+                            结合材料科学与人工智能技术，实现了超疏水材料的智能识别与分类。
+                        </p>
+                        <div class="research-metrics">
+                            <span class="citation">共同第一作者</span>
+                            <span class="impact">SCI Q2</span>
+                        </div>
+                        <p class="research-paper">Surfaces and Interfaces</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">联系我</h2>
+                <p class="section-subtitle">让我们一起探讨技术与创新</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>电话</h3>
+                            <p>+86 13612979060</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>电子邮件</h3>
+                            <p>1210611347@qq.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-github"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>GitHub</h3>
+                            <p>@SCUTcoder</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>LinkedIn</h3>
+                            <p>linkedin.com/in/zhangcheng-scut</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fab fa-twitter"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Twitter</h3>
+                            <p>@SCUTcoder</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form class="form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">姓名</label>
+                                <input type="text" id="name" name="name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">邮箱</label>
+                                <input type="email" id="email" name="email" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">主题</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">消息</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            发送消息
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <i class="fas fa-code"></i>
+                    <span>章程技术主页</span>
+                </div>
+                <p class="footer-text">
+                    © 2024 章程. 致力于分布式系统与后端技术创新。
+                </p>
+                <div class="footer-links">
+                    <a href="#hero">首页</a>
+                    <a href="#about">关于</a>
+                    <a href="#projects">项目</a>
+                    <a href="#contact">联系</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
