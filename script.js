@@ -284,7 +284,7 @@ function createParticle(container) {
     particle.style.top = `${Math.random() * 100}%`;
 
     // 随机颜色
-    const colors = ['#00d4ff', '#ff0080', '#7928ca', '#00ff88'];
+    const colors = ['#D97757', '#C4664A', '#8B7355', '#6B8E7F'];
     const color = colors[Math.floor(Math.random() * colors.length)];
     particle.style.background = color;
     particle.style.boxShadow = `0 0 ${size * 2}px ${color}`;
@@ -451,7 +451,7 @@ function initializeMouseEffect() {
         position: fixed;
         width: 20px;
         height: 20px;
-        border: 2px solid #00d4ff;
+        border: 2px solid #D97757;
         border-radius: 50%;
         pointer-events: none;
         z-index: 9999;
@@ -470,12 +470,12 @@ function initializeMouseEffect() {
     document.querySelectorAll('a, button, .btn, .skill-tag, .project-card, .research-card').forEach(element => {
         element.addEventListener('mouseenter', () => {
             cursor.style.transform = 'scale(1.5)';
-            cursor.style.borderColor = '#ff0080';
+            cursor.style.borderColor = '#C4664A';
         });
 
         element.addEventListener('mouseleave', () => {
             cursor.style.transform = 'scale(1)';
-            cursor.style.borderColor = '#00d4ff';
+            cursor.style.borderColor = '#D97757';
         });
     });
 }
@@ -490,7 +490,7 @@ function initializeScrollProgress() {
         left: 0;
         width: 0%;
         height: 3px;
-        background: linear-gradient(90deg, #00d4ff, #ff0080);
+        background: linear-gradient(90deg, #D97757, #C4664A);
         z-index: 1001;
         transition: width 0.25s ease;
     `;
