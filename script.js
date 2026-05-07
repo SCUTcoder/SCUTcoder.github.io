@@ -39,22 +39,24 @@ function initMobileMenu() {
     if (!toggle || !menu) return;
 
     toggle.addEventListener('click', () => {
-        const isOpen = menu.style.display === 'flex';
-        menu.style.display = isOpen ? '' : 'flex';
-        menu.style.flexDirection = 'column';
-        menu.style.position = 'absolute';
-        menu.style.top = '72px';
-        menu.style.left = '0';
-        menu.style.right = '0';
-        menu.style.padding = '20px 24px';
-        menu.style.background = 'rgba(250,249,245,0.98)';
-        menu.style.borderBottom = '1px solid rgba(0,0,0,0.06)';
-        menu.style.backdropFilter = 'blur(12px)';
-        if (isOpen) menu.removeAttribute('style');
+        const isOpen = menu.classList.toggle('is-open');
+        toggle.classList.toggle('is-open', isOpen);
+        toggle.setAttribute('aria-expanded', String(isOpen));
     });
 
     document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => menu.removeAttribute('style'));
+        link.addEventListener('click', () => {
+            menu.classList.remove('is-open');
+            toggle.classList.remove('is-open');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+
+    window.addEventListener('keydown', event => {
+        if (event.key !== 'Escape') return;
+        menu.classList.remove('is-open');
+        toggle.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
     });
 }
 
