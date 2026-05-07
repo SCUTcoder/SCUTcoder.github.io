@@ -791,6 +791,67 @@ code, .badge {
     font-size: 0.78rem;
 }
 
+.friend-reviews {
+    position: relative;
+    z-index: 1;
+    padding: 24px 0 92px;
+}
+
+.friend-reviews-header {
+    max-width: 620px;
+    margin-bottom: 26px;
+}
+
+.friend-reviews-header h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 400;
+    line-height: 1.15;
+    margin-bottom: 12px;
+}
+
+.friend-reviews-header p {
+    color: var(--time-muted);
+    font-size: 1rem;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.review-card {
+    min-height: 190px;
+    padding: 22px;
+    border: 1px solid rgba(22, 22, 22, 0.08);
+    border-radius: var(--radius-sm);
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 18px 36px rgba(22, 22, 22, 0.06);
+}
+
+.review-name {
+    margin-bottom: 18px;
+    color: var(--time-teal);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+}
+
+.review-card p {
+    margin: 0;
+    color: var(--time-ink);
+    font-size: 1rem;
+    line-height: 1.75;
+}
+
+.featured-review {
+    background: rgba(255, 255, 255, 0.84);
+    border-color: rgba(217, 119, 87, 0.24);
+}
+
+.featured-review .review-name {
+    color: var(--anthropic-terracotta);
+}
+
 /* Bento Grid */
 .bento-grid {
     display: grid;
@@ -1143,6 +1204,16 @@ code, .badge {
     .time-feature {
         grid-template-columns: minmax(190px, 0.72fr) minmax(260px, 1fr);
     }
+
+    .friend-reviews-header {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .review-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 @media (max-width: 600px) {
@@ -1258,6 +1329,18 @@ code, .badge {
         align-items: flex-start;
         flex-direction: column;
         gap: 6px;
+    }
+
+    .friend-reviews {
+        padding-bottom: 72px;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .review-card {
+        min-height: auto;
     }
 }
 

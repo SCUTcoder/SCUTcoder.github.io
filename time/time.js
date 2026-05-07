@@ -82,7 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function getTimeMood(minutes) {
         if (minutes === 0) {
-            return { punctuality: '奇迹', arrival: '真到了', note: '何苇杭时区短暂接入现实时间' };
+            return { punctuality: '奇迹', arrival: '真到了', note: '何苇杭标准时短暂接入现实时间' };
         }
         if (minutes <= 30) {
             return { punctuality: '还行', arrival: '快了', note: `${formatDelay(minutes)}，属于轻微缓冲` };

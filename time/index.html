@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>何苇杭时区 - 慢中国一小时</title>
+    <title>何苇杭标准时 - 慢中国一小时</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D97757' d='M12 0C12.5 5.5 16.5 9.5 22 10V14C16.5 14.5 12.5 18.5 12 24H10C9.5 18.5 5.5 14.5 0 14V10C5.5 9.5 9.5 5.5 10 0H12Z'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="../styles.css?v=mobile-nav">
+    <link rel="stylesheet" href="../styles.css?v=standard-time">
 </head>
 <body class="time-page">
     <nav class="navbar">
@@ -24,7 +24,7 @@
                 <a href="/#experience" class="nav-link">经历</a>
                 <a href="/#projects" class="nav-link">项目</a>
                 <a href="/#research" class="nav-link">研究</a>
-                <a href="/time/" class="nav-link active">何苇杭时区</a>
+                <a href="/time/" class="nav-link active">何苇杭标准时</a>
                 <a href="/#contact" class="nav-link">联系</a>
             </div>
             <button class="nav-toggle" type="button" aria-label="打开导航菜单" aria-expanded="false">
@@ -42,11 +42,11 @@
             </div>
             <div class="time-copy">
                 <div class="hero-badge time-badge" id="timezoneBadge">UTC+7 · China - 1h</div>
-                <h1 id="time-title" class="hero-title">何苇杭时区</h1>
+                <h1 id="time-title" class="hero-title">何苇杭标准时</h1>
                 <p class="hero-description">
                     中国标准时间减一小时。专为迟到大王、缓冲型人格、以及所有“马上到”的经典时刻校准。
                 </p>
-                <div class="time-tags" aria-label="何苇杭时区标签">
+                <div class="time-tags" aria-label="何苇杭标准时标签">
                     <span>迟到大王</span>
                     <span>迟到一小时就是准时</span>
                     <span>没有时间观念</span>
@@ -63,7 +63,7 @@
                     <p>“怎么可能迟到”</p>
                     <p>“已经在路上了”</p>
                 </div>
-                <div class="time-facts" aria-label="何苇杭时区参数">
+                <div class="time-facts" aria-label="何苇杭标准时参数">
                     <div class="time-fact">
                         <span>时区偏移</span>
                         <strong id="offsetFact">-01:00</strong>
@@ -79,15 +79,15 @@
                 </div>
             </div>
 
-            <div class="time-feature" aria-label="何苇杭时区主题">
+            <div class="time-feature" aria-label="何苇杭标准时主题">
                 <figure class="time-portrait-card">
-                    <img src="../assets/he-weihang-time.png" alt="何苇杭时区主题照片" class="time-portrait" width="200" height="300">
+                    <img src="../assets/he-weihang-time.png" alt="何苇杭标准时主题照片" class="time-portrait" width="200" height="300">
                     <span class="portrait-badge">TIMEZONE MASCOT</span>
                     <span class="late-stamp">迟到认证</span>
                     <figcaption>本时区形象代言人</figcaption>
                 </figure>
 
-                <div class="clock-shell" aria-label="何苇杭时区时钟">
+                <div class="clock-shell" aria-label="何苇杭标准时时钟">
                     <div class="clock-header">
                         <span>HE WEIHANG STANDARD TIME</span>
                         <strong id="clockOffset">-1H</strong>
@@ -104,12 +104,12 @@
                     </div>
 
                     <div class="time-panel">
-                        <div class="timezone-label">何苇杭时区现在是</div>
+                        <div class="timezone-label">何苇杭标准时现在是</div>
                         <time id="digitalTime" class="digital-time" datetime="">--:--:--</time>
                         <div id="dateLine" class="date-line">正在校准时间...</div>
                         <div id="chinaTime" class="china-time">中国时间 --:--:--</div>
                     </div>
-                    <div class="delay-control" aria-label="何苇杭时区延时调节">
+                    <div class="delay-control" aria-label="何苇杭标准时延时调节">
                         <div class="delay-control-top">
                             <label for="delaySlider">自助延时</label>
                             <output id="delayValue" for="delaySlider">慢 1 小时</output>
@@ -125,9 +125,35 @@
                 </div>
             </div>
         </section>
+
+        <section class="friend-reviews" aria-labelledby="friend-reviews-title">
+            <div class="friend-reviews-header">
+                <div class="hero-badge time-badge">FRIEND REVIEWS</div>
+                <h2 id="friend-reviews-title">朋友评价何苇杭</h2>
+                <p>来自受害者视角的准时性批评，样本真实，情绪稳定。</p>
+            </div>
+            <div class="review-grid">
+                <article class="review-card">
+                    <div class="review-name">章程</div>
+                    <p>约七点见面，我七点到了，他七点才开始进入“准备出门”的心理建设阶段。</p>
+                </article>
+                <article class="review-card">
+                    <div class="review-name">张崇祥</div>
+                    <p>他说“马上到”的时候，我一般会先去买杯喝的，因为这个马上通常还有一整集电视剧那么长。</p>
+                </article>
+                <article class="review-card">
+                    <div class="review-name">叶昊</div>
+                    <p>何苇杭不是迟到，他是把所有人的时间都同步到了自己的标准时。</p>
+                </article>
+                <article class="review-card featured-review">
+                    <div class="review-name">涂帅</div>
+                    <p>来南山吃饭我得提前出门坐一小时多地铁，但我不是最后一个到的。</p>
+                </article>
+            </div>
+        </section>
     </main>
 
     <script src="../script.js?v=mobile-nav"></script>
-    <script src="./time.js?v=delay-slider"></script>
+    <script src="./time.js?v=standard-time"></script>
 </body>
 </html>
