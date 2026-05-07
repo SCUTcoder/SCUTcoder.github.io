@@ -288,18 +288,18 @@ code, .badge {
 }
 
 .time-main {
-    max-width: 1180px;
+    max-width: 1460px;
     min-height: 100vh;
     position: relative;
 }
 
 .time-hero {
     min-height: 100vh;
-    padding: 126px 0 54px;
+    padding: 122px 0 58px;
     position: relative;
     display: grid;
-    grid-template-columns: minmax(340px, 0.84fr) minmax(560px, 1.16fr);
-    gap: 36px;
+    grid-template-columns: minmax(260px, 0.72fr) minmax(380px, 1fr) minmax(540px, 1.34fr);
+    gap: 20px;
     align-items: center;
 }
 
@@ -366,7 +366,8 @@ code, .badge {
 }
 
 .time-copy,
-.time-feature {
+.time-portrait-card,
+.clock-shell {
     position: relative;
     z-index: 1;
 }
@@ -380,7 +381,7 @@ code, .badge {
 
 .time-copy .hero-title {
     color: var(--time-ink);
-    font-size: clamp(3.2rem, 6.4vw, 4.9rem);
+    font-size: clamp(3rem, 4.8vw, 3.85rem);
     letter-spacing: 0;
     line-height: 0.98;
     margin-bottom: 20px;
@@ -389,9 +390,9 @@ code, .badge {
 
 .time-copy .hero-description {
     color: var(--time-muted);
-    font-size: 1.08rem;
+    font-size: 1rem;
     line-height: 1.75;
-    max-width: 500px;
+    max-width: 420px;
     margin-bottom: 28px;
 }
 
@@ -399,7 +400,7 @@ code, .badge {
     display: flex;
     flex-wrap: wrap;
     gap: 9px;
-    max-width: 570px;
+    max-width: 430px;
 }
 
 .time-tags span {
@@ -430,7 +431,7 @@ code, .badge {
 }
 
 .time-lines {
-    max-width: 570px;
+    max-width: 430px;
     margin-top: 18px;
     padding: 14px;
     display: grid;
@@ -472,7 +473,7 @@ code, .badge {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 10px;
-    max-width: 540px;
+    max-width: 430px;
     margin-top: 18px;
 }
 
@@ -501,17 +502,12 @@ code, .badge {
     font-weight: 500;
 }
 
-.time-feature {
-    display: grid;
-    grid-template-columns: minmax(220px, 0.78fr) minmax(330px, 1fr);
-    gap: 18px;
-    align-items: stretch;
-}
-
 .time-portrait-card {
     position: relative;
     margin: 0;
-    min-height: 540px;
+    aspect-ratio: 1;
+    min-height: 0;
+    align-self: center;
     border-radius: var(--radius-sm);
     overflow: hidden;
     background: #121212;
@@ -522,9 +518,9 @@ code, .badge {
 .time-portrait {
     width: 100%;
     height: 100%;
-    min-height: 540px;
+    min-height: 0;
     object-fit: cover;
-    object-position: center;
+    object-position: center 42%;
     display: block;
     filter: saturate(1.05) contrast(1.02);
 }
@@ -579,18 +575,18 @@ code, .badge {
 }
 
 .clock-shell {
-    min-height: 540px;
+    min-height: 430px;
     position: relative;
     overflow: hidden;
     background: rgba(255, 255, 255, 0.86);
     border: 1px solid rgba(22, 22, 22, 0.1);
     border-radius: var(--radius-sm);
     box-shadow: 0 26px 60px rgba(22, 22, 22, 0.12);
-    padding: clamp(22px, 3vw, 32px);
+    padding: clamp(24px, 2.4vw, 34px);
     display: grid;
-    gap: 24px;
-    justify-items: center;
-    align-content: space-between;
+    grid-template-columns: minmax(210px, 0.92fr) minmax(230px, 1fr);
+    gap: 20px 24px;
+    align-items: center;
 }
 
 .clock-shell::before {
@@ -604,6 +600,7 @@ code, .badge {
 }
 
 .clock-header {
+    grid-column: 1 / -1;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -620,7 +617,7 @@ code, .badge {
 }
 
 .clock-face {
-    width: min(305px, 100%);
+    width: min(300px, 100%);
     aspect-ratio: 1;
     border-radius: 50%;
     position: relative;
@@ -705,10 +702,12 @@ code, .badge {
 }
 
 .time-panel {
+    align-self: end;
     width: 100%;
     text-align: center;
-    padding-top: 24px;
-    border-top: 1px solid rgba(22, 22, 22, 0.08);
+    padding: 0 0 0 24px;
+    border-top: none;
+    border-left: 1px solid rgba(22, 22, 22, 0.08);
 }
 
 .timezone-label,
@@ -722,7 +721,7 @@ code, .badge {
     display: block;
     margin: 9px 0;
     font-family: 'JetBrains Mono', monospace;
-    font-size: clamp(2.35rem, 4.6vw, 3.65rem);
+    font-size: clamp(2.3rem, 3.7vw, 2.85rem);
     line-height: 1;
     color: var(--time-ink);
     font-variant-numeric: tabular-nums;
@@ -736,6 +735,7 @@ code, .badge {
 }
 
 .delay-control {
+    grid-column: 2;
     width: 100%;
     padding: 14px;
     border: 1px solid rgba(36, 95, 99, 0.14);
@@ -779,6 +779,7 @@ code, .badge {
 }
 
 .clock-note {
+    grid-column: 2;
     width: 100%;
     min-height: 36px;
     display: flex;
@@ -1147,6 +1148,44 @@ code, .badge {
 }
 
 /* Responsive */
+@media (max-width: 1240px) {
+    .time-main {
+        max-width: 980px;
+    }
+
+    .time-hero {
+        grid-template-columns: minmax(260px, 0.78fr) minmax(0, 1.22fr);
+        gap: 24px;
+        align-items: start;
+    }
+
+    .time-copy {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .time-copy .hero-title {
+        white-space: normal;
+    }
+
+    .time-copy .hero-description,
+    .time-tags,
+    .time-lines,
+    .time-facts {
+        max-width: 100%;
+    }
+
+    .time-portrait-card {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .clock-shell {
+        grid-column: 1 / -1;
+        grid-template-columns: minmax(260px, 0.86fr) minmax(320px, 1fr);
+    }
+}
+
 @media (max-width: 900px) {
     .hero {
         grid-template-columns: 1fr;
@@ -1171,6 +1210,40 @@ code, .badge {
         grid-template-columns: 1fr;
         gap: 40px;
         text-align: center;
+    }
+
+    .time-copy {
+        grid-column: auto;
+        grid-row: auto;
+        order: 1;
+    }
+
+    .time-portrait-card {
+        grid-column: auto;
+        grid-row: auto;
+        order: 2;
+        width: min(420px, 100%);
+        margin: 0 auto;
+    }
+
+    .clock-shell {
+        grid-column: auto;
+        order: 3;
+        width: min(620px, 100%);
+        margin: 0 auto;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .time-panel {
+        padding: 24px 0 0;
+        border-left: none;
+        border-top: 1px solid rgba(22, 22, 22, 0.08);
+    }
+
+    .delay-control,
+    .clock-note {
+        grid-column: 1;
     }
 
     .time-globe {
@@ -1199,10 +1272,6 @@ code, .badge {
     .time-facts {
         margin-left: auto;
         margin-right: auto;
-    }
-
-    .time-feature {
-        grid-template-columns: minmax(190px, 0.72fr) minmax(260px, 1fr);
     }
 
     .friend-reviews-header {
@@ -1279,10 +1348,6 @@ code, .badge {
         justify-content: center;
     }
 
-    .time-feature {
-        grid-template-columns: 1fr;
-    }
-
     .time-globe {
         top: 86px;
         width: min(360px, 92vw);
@@ -1316,9 +1381,9 @@ code, .badge {
     }
 
     .time-portrait {
-        height: auto;
+        height: 100%;
         min-height: 0;
-        max-height: 420px;
+        max-height: none;
     }
 
     .clock-face {
