@@ -36,10 +36,10 @@
     <main class="main-content time-main">
         <section class="time-hero" aria-labelledby="time-title">
             <div class="time-copy">
-                <div class="hero-badge">UTC+7 · China - 1h</div>
+                <div class="hero-badge time-badge">UTC+7 · China - 1h</div>
                 <h1 id="time-title" class="hero-title">何苇杭时区</h1>
                 <p class="hero-description">
-                    这里的时间永远比中国标准时间慢一小时。慢一点也挺好，像给今天多留了一格缓存。
+                    中国标准时间减一小时。专为迟到大王、缓冲型人格、以及所有“马上到”的经典时刻校准。
                 </p>
                 <div class="time-tags" aria-label="何苇杭时区标签">
                     <span>迟到大王</span>
@@ -47,15 +47,35 @@
                     <span>慢一小时出发</span>
                     <span>DDL 友好型人格</span>
                 </div>
+                <div class="time-facts" aria-label="何苇杭时区参数">
+                    <div class="time-fact">
+                        <span>时区偏移</span>
+                        <strong>-01:00</strong>
+                    </div>
+                    <div class="time-fact">
+                        <span>准点概率</span>
+                        <strong>随缘</strong>
+                    </div>
+                    <div class="time-fact">
+                        <span>到达状态</span>
+                        <strong>马上</strong>
+                    </div>
+                </div>
             </div>
 
             <div class="time-feature" aria-label="何苇杭时区主题">
                 <figure class="time-portrait-card">
-                    <img src="../assets/he-weihang-time.png" alt="何苇杭时区主题照片" class="time-portrait">
+                    <img src="../assets/he-weihang-time.png" alt="何苇杭时区主题照片" class="time-portrait" width="200" height="300">
+                    <span class="portrait-badge">TIMEZONE MASCOT</span>
+                    <span class="late-stamp">迟到认证</span>
                     <figcaption>本时区形象代言人</figcaption>
                 </figure>
 
                 <div class="clock-shell" aria-label="何苇杭时区时钟">
+                    <div class="clock-header">
+                        <span>HE WEIHANG STANDARD TIME</span>
+                        <strong>-1H</strong>
+                    </div>
                     <div class="clock-face">
                         <div class="clock-mark mark-12">12</div>
                         <div class="clock-mark mark-3">3</div>
@@ -73,6 +93,7 @@
                         <div id="dateLine" class="date-line">正在校准时间...</div>
                         <div id="chinaTime" class="china-time">中国时间 --:--:--</div>
                     </div>
+                    <div class="clock-note">慢一小时，稳定运行中</div>
                 </div>
             </div>
         </section>
