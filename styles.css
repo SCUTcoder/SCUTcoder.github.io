@@ -235,12 +235,15 @@ code, .badge {
     --time-ink: #161616;
     --time-muted: #5a554e;
     --time-teal: #245f63;
+    --time-blue: #5f83a3;
     --time-teal-soft: #dcebe6;
     --time-gold: #efc45d;
     --time-paper: #fbf7ef;
     min-height: 100vh;
+    overflow-x: hidden;
     background:
-        linear-gradient(120deg, rgba(36, 95, 99, 0.16), rgba(251, 247, 239, 0) 44%),
+        linear-gradient(120deg, rgba(36, 95, 99, 0.16), rgba(251, 247, 239, 0) 42%),
+        linear-gradient(235deg, rgba(95, 131, 163, 0.16), rgba(251, 247, 239, 0) 46%),
         linear-gradient(180deg, #fbf7ef 0%, #eef3f0 100%);
 }
 
@@ -251,15 +254,85 @@ code, .badge {
 .time-main {
     max-width: 1180px;
     min-height: 100vh;
+    position: relative;
 }
 
 .time-hero {
     min-height: 100vh;
     padding: 126px 0 54px;
+    position: relative;
     display: grid;
     grid-template-columns: minmax(340px, 0.84fr) minmax(560px, 1.16fr);
     gap: 36px;
     align-items: center;
+}
+
+.time-globe {
+    position: absolute;
+    width: min(620px, 52vw);
+    aspect-ratio: 1;
+    right: -130px;
+    top: 72px;
+    pointer-events: none;
+    opacity: 0.34;
+    z-index: 0;
+}
+
+.globe-core,
+.globe-orbit {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+}
+
+.globe-core {
+    overflow: hidden;
+    border: 1px solid rgba(36, 95, 99, 0.2);
+    background:
+        radial-gradient(ellipse at 29% 32%, rgba(36, 95, 99, 0.24) 0 8%, transparent 9%),
+        radial-gradient(ellipse at 42% 55%, rgba(36, 95, 99, 0.18) 0 11%, transparent 12%),
+        radial-gradient(ellipse at 66% 42%, rgba(217, 119, 87, 0.18) 0 9%, transparent 10%),
+        radial-gradient(ellipse at 62% 70%, rgba(36, 95, 99, 0.16) 0 7%, transparent 8%),
+        repeating-linear-gradient(0deg, transparent 0 38px, rgba(36, 95, 99, 0.14) 39px 40px),
+        repeating-linear-gradient(90deg, transparent 0 54px, rgba(36, 95, 99, 0.14) 55px 56px),
+        radial-gradient(circle at 45% 35%, rgba(255, 255, 255, 0.78), rgba(220, 235, 230, 0.44) 62%, rgba(95, 131, 163, 0.22));
+    box-shadow: inset -28px -24px 70px rgba(36, 95, 99, 0.12);
+}
+
+.globe-core::before,
+.globe-core::after {
+    content: "";
+    position: absolute;
+    inset: 8%;
+    border: 1px solid rgba(36, 95, 99, 0.16);
+    border-radius: 50%;
+}
+
+.globe-core::before {
+    transform: scaleX(0.46);
+}
+
+.globe-core::after {
+    transform: scaleY(0.54);
+}
+
+.globe-orbit {
+    border: 1px solid rgba(217, 119, 87, 0.2);
+}
+
+.orbit-one {
+    transform: rotate(-18deg) scaleX(1.18) scaleY(0.42);
+}
+
+.orbit-two {
+    border-color: rgba(36, 95, 99, 0.22);
+    transform: rotate(23deg) scaleX(1.12) scaleY(0.35);
+}
+
+.time-copy,
+.time-feature {
+    position: relative;
+    z-index: 1;
 }
 
 .time-badge {
@@ -289,8 +362,8 @@ code, .badge {
 .time-tags {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
-    max-width: 540px;
+    gap: 9px;
+    max-width: 570px;
 }
 
 .time-tags span {
@@ -302,15 +375,22 @@ code, .badge {
     border: 1px solid rgba(36, 95, 99, 0.2);
     background: rgba(255, 255, 255, 0.7);
     color: var(--time-teal);
-    font-size: 0.88rem;
+    font-size: 0.84rem;
     font-weight: 600;
     box-shadow: 0 8px 18px rgba(22, 22, 22, 0.05);
 }
 
 .time-tags span:nth-child(2),
-.time-tags span:nth-child(4) {
+.time-tags span:nth-child(5),
+.time-tags span:nth-child(8) {
     border-color: rgba(217, 119, 87, 0.28);
     color: var(--anthropic-terracotta);
+}
+
+.time-tags span:nth-child(3),
+.time-tags span:nth-child(6) {
+    border-color: rgba(95, 131, 163, 0.22);
+    color: var(--time-blue);
 }
 
 .time-facts {
@@ -913,6 +993,14 @@ code, .badge {
         text-align: center;
     }
 
+    .time-globe {
+        width: min(520px, 92vw);
+        right: 50%;
+        top: 92px;
+        transform: translateX(50%);
+        opacity: 0.18;
+    }
+
     .time-copy .hero-title {
         white-space: normal;
     }
@@ -964,6 +1052,16 @@ code, .badge {
 
     .time-feature {
         grid-template-columns: 1fr;
+    }
+
+    .time-globe {
+        top: 86px;
+        width: min(360px, 92vw);
+        opacity: 0.14;
+    }
+
+    .time-globe .globe-orbit {
+        display: none;
     }
 
     .time-facts {
