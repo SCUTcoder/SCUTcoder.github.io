@@ -1682,6 +1682,722 @@ code, .badge {
     }
 }
 
+/* Time page redesign */
+.time-page {
+    --time-ink: #101418;
+    --time-muted: #5f6670;
+    --time-soft: #8a929e;
+    --time-blue: #0a84ff;
+    --time-blue-soft: rgba(10, 132, 255, 0.11);
+    --time-green: #21a67a;
+    --time-red: #e64b3c;
+    --time-gold: #b9841c;
+    --time-surface: rgba(255, 255, 255, 0.74);
+    --time-surface-strong: rgba(255, 255, 255, 0.9);
+    --time-line: rgba(16, 20, 24, 0.09);
+    --time-shadow: 0 24px 72px rgba(28, 39, 54, 0.13);
+    background:
+        linear-gradient(135deg, rgba(10, 132, 255, 0.12) 0%, transparent 34%),
+        linear-gradient(225deg, rgba(33, 166, 122, 0.1) 0%, transparent 30%),
+        linear-gradient(180deg, #f8fbff 0%, #f3f5f8 46%, #ffffff 100%);
+    overflow-x: clip;
+}
+
+.time-page .navbar {
+    background: rgba(248, 251, 255, 0.78);
+}
+
+.time-main {
+    max-width: 1180px;
+    padding-left: 24px;
+    padding-right: 24px;
+    overflow-x: clip;
+}
+
+.time-hero {
+    padding: 112px 0 54px;
+    gap: 24px;
+}
+
+.time-hero-stage {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(0, 0.82fr) minmax(520px, 1.18fr);
+    gap: 28px;
+    align-items: stretch;
+}
+
+.time-copy {
+    min-height: 430px;
+    padding: 34px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 26px;
+    border: 1px solid var(--time-line);
+    border-radius: 36px;
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.62)),
+        rgba(255, 255, 255, 0.72);
+    box-shadow: var(--time-shadow);
+    backdrop-filter: blur(28px);
+    -webkit-backdrop-filter: blur(28px);
+}
+
+.time-copy::after {
+    content: "UTC+7";
+    position: absolute;
+    right: 28px;
+    bottom: 22px;
+    color: rgba(10, 132, 255, 0.08);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 4.8rem;
+    font-weight: 500;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.time-copy .time-badge {
+    margin-bottom: 0;
+}
+
+.time-badge {
+    min-height: 34px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 999px;
+    background: rgba(10, 132, 255, 0.09);
+    border-color: rgba(10, 132, 255, 0.16);
+    color: #075db4;
+    box-shadow: none;
+}
+
+.time-copy .hero-title {
+    max-width: none;
+    margin: 0;
+    color: var(--time-ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 3.95rem;
+    font-weight: 650;
+    line-height: 0.98;
+    letter-spacing: 0;
+    white-space: nowrap;
+}
+
+.time-copy .hero-description {
+    max-width: 520px;
+    margin: 0;
+    color: var(--time-muted);
+    font-size: 1.08rem;
+    line-height: 1.72;
+}
+
+.time-context {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: minmax(0, 0.94fr) minmax(360px, 0.76fr);
+    gap: 16px;
+    align-items: stretch;
+}
+
+.time-tags {
+    max-width: 560px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.time-tags span {
+    min-height: 34px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    border: 1px solid rgba(16, 20, 24, 0.08);
+    background: rgba(255, 255, 255, 0.68);
+    color: var(--time-ink);
+    font-size: 0.8rem;
+    font-weight: 600;
+    box-shadow: none;
+}
+
+.time-tags span:nth-child(2),
+.time-tags span:nth-child(5),
+.time-tags span:nth-child(8) {
+    border-color: rgba(10, 132, 255, 0.18);
+    color: #075db4;
+    background: rgba(10, 132, 255, 0.08);
+}
+
+.time-tags span:nth-child(3),
+.time-tags span:nth-child(6) {
+    border-color: rgba(230, 75, 60, 0.16);
+    color: #b8362b;
+    background: rgba(230, 75, 60, 0.07);
+}
+
+.time-lines {
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+    padding: 18px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    border: 1px solid rgba(16, 20, 24, 0.08);
+    border-radius: 26px;
+    background: rgba(248, 250, 252, 0.72);
+    box-shadow: none;
+}
+
+.time-lines span {
+    grid-column: 1 / -1;
+    grid-row: auto;
+    padding: 0 0 2px;
+    border-right: none;
+    color: var(--time-soft);
+    font-size: 0.72rem;
+}
+
+.time-lines p {
+    min-height: 42px;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.72);
+    color: var(--time-ink);
+    font-size: 0.9rem;
+    line-height: 1.36;
+}
+
+.time-lines p:nth-of-type(2),
+.time-lines p:nth-of-type(3) {
+    color: #075db4;
+}
+
+.clock-shell {
+    min-height: 430px;
+    margin-top: 0;
+    padding: 28px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 198px;
+    grid-template-rows: auto minmax(0, 1fr) auto auto;
+    gap: 20px 22px;
+    align-items: center;
+    border-radius: 36px;
+    border: 1px solid var(--time-line);
+    background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.7)),
+        rgba(255, 255, 255, 0.84);
+    box-shadow: var(--time-shadow);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+}
+
+.clock-shell::before {
+    top: -170px;
+    right: -170px;
+    width: 360px;
+    height: 360px;
+    background: radial-gradient(circle, rgba(10, 132, 255, 0.16), transparent 68%);
+}
+
+.clock-shell::after {
+    inset: auto 28px 26px auto;
+    width: 190px;
+    opacity: 0.34;
+}
+
+.clock-header {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    color: var(--time-soft);
+    font-size: 0.72rem;
+}
+
+.clock-header strong {
+    min-width: 56px;
+    min-height: 34px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 999px;
+    background: rgba(10, 132, 255, 0.1);
+    color: #075db4;
+    font-size: 0.88rem;
+}
+
+.time-panel {
+    grid-column: 1;
+    align-self: center;
+    padding: 0;
+    border: none;
+    text-align: left;
+}
+
+.timezone-label,
+.china-time {
+    color: var(--time-muted);
+    font-size: 0.82rem;
+}
+
+.digital-time {
+    margin: 14px 0 12px;
+    color: var(--time-ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 4.45rem;
+    font-weight: 650;
+    line-height: 0.95;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+}
+
+.date-line {
+    margin-bottom: 12px;
+    color: var(--time-muted);
+    font-size: 1rem;
+}
+
+.clock-face {
+    grid-column: 2;
+    grid-row: 2;
+    justify-self: end;
+    width: 194px;
+    background:
+        radial-gradient(circle at 50% 50%, rgba(10, 132, 255, 0.18) 0 7px, transparent 8px),
+        repeating-conic-gradient(from 0deg, rgba(16, 20, 24, 0.18) 0deg 1deg, transparent 1deg 30deg),
+        linear-gradient(145deg, #ffffff, #edf3fb);
+    border: 1px solid rgba(16, 20, 24, 0.08);
+    box-shadow: inset 0 0 0 12px rgba(255, 255, 255, 0.72), 0 18px 46px rgba(28, 39, 54, 0.11);
+}
+
+.minute-hand {
+    background: var(--time-blue);
+}
+
+.second-hand {
+    background: var(--time-red);
+}
+
+.clock-pin {
+    background: var(--time-blue);
+}
+
+.delay-control {
+    grid-column: 1 / -1;
+    width: 100%;
+    padding: 18px;
+    border-radius: 24px;
+    border: 1px solid rgba(10, 132, 255, 0.14);
+    background: rgba(10, 132, 255, 0.08);
+}
+
+.delay-control-top,
+.delay-scale {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+}
+
+.delay-control label {
+    color: var(--time-muted);
+    font-size: 0.76rem;
+}
+
+.delay-control output {
+    color: #075db4;
+    font-size: 0.9rem;
+}
+
+.delay-control input[type="range"] {
+    width: 100%;
+    height: 30px;
+    accent-color: var(--time-blue);
+    cursor: pointer;
+}
+
+.delay-scale {
+    color: var(--time-soft);
+    font-size: 0.68rem;
+}
+
+.time-facts {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    max-width: none;
+    margin-top: 0;
+}
+
+.time-fact {
+    min-height: 80px;
+    padding: 15px;
+    border-radius: 22px;
+    border: 1px solid rgba(16, 20, 24, 0.08);
+    background: rgba(255, 255, 255, 0.66);
+    box-shadow: none;
+}
+
+.time-fact span {
+    color: var(--time-muted);
+    font-size: 0.78rem;
+}
+
+.time-fact strong {
+    color: var(--time-ink);
+    font-size: 1.22rem;
+}
+
+.clock-note {
+    grid-column: 1 / -1;
+    width: 100%;
+    min-height: 44px;
+    border-radius: 999px;
+    border: 1px solid rgba(10, 132, 255, 0.14);
+    background: rgba(10, 132, 255, 0.08);
+    color: #075db4;
+}
+
+.time-media-wall {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: minmax(260px, 0.52fr) minmax(0, 1fr);
+    gap: 24px;
+    align-items: stretch;
+}
+
+.time-portrait-card,
+.time-quote-card {
+    border-radius: 32px;
+    border: 1px solid var(--time-line);
+    box-shadow: 0 22px 58px rgba(28, 39, 54, 0.12);
+}
+
+.time-portrait-card {
+    min-height: 360px;
+    aspect-ratio: auto;
+    background: #11161d;
+}
+
+.time-portrait {
+    object-position: center 40%;
+}
+
+.portrait-badge {
+    background: rgba(255, 255, 255, 0.78);
+    color: var(--time-ink);
+}
+
+.late-stamp {
+    border-color: var(--time-red);
+    color: var(--time-red);
+}
+
+.time-quote-card {
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.78);
+    backdrop-filter: blur(26px);
+    -webkit-backdrop-filter: blur(26px);
+}
+
+.time-quote-card img {
+    width: 100%;
+    height: 100%;
+    min-height: 360px;
+    object-fit: cover;
+    object-position: center top;
+    border-radius: 22px;
+}
+
+.friend-reviews {
+    padding: 18px 0 104px;
+}
+
+.friend-reviews-header {
+    margin-bottom: 24px;
+    padding: 28px 0 0;
+    display: grid;
+    grid-template-columns: minmax(280px, 0.72fr) minmax(320px, 1fr);
+    gap: 10px 28px;
+    align-items: end;
+}
+
+.friend-reviews-header h2 {
+    color: var(--time-ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 2.64rem;
+    font-weight: 650;
+    line-height: 1.08;
+}
+
+.friend-reviews-header p {
+    max-width: 520px;
+    justify-self: end;
+    color: var(--time-muted);
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.review-card {
+    min-height: 184px;
+    padding: 24px;
+    border-radius: 26px;
+    border: 1px solid rgba(16, 20, 24, 0.08);
+    background: rgba(255, 255, 255, 0.68);
+    box-shadow: 0 18px 48px rgba(28, 39, 54, 0.09);
+}
+
+.review-name {
+    color: #075db4;
+}
+
+.review-card p {
+    color: var(--time-ink);
+    font-size: 0.96rem;
+}
+
+.featured-review {
+    background: rgba(255, 255, 255, 0.82);
+    border-color: rgba(230, 75, 60, 0.18);
+}
+
+@media (max-width: 1180px) {
+    .time-hero-stage {
+        grid-template-columns: 1fr;
+    }
+
+    .time-copy,
+    .clock-shell {
+        min-height: auto;
+    }
+
+    .time-copy .hero-title {
+        max-width: none;
+        font-size: 4.2rem;
+        white-space: normal;
+    }
+
+    .time-context {
+        grid-template-columns: 1fr;
+    }
+
+    .time-media-wall {
+        grid-template-columns: minmax(220px, 0.48fr) minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .time-main {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .time-hero {
+        padding: 104px 0 42px;
+        text-align: left;
+    }
+
+    .time-copy {
+        padding: 26px;
+        align-items: flex-start;
+        text-align: left;
+    }
+
+    .time-copy .hero-title {
+        font-size: 3.4rem;
+        line-height: 1;
+    }
+
+    .time-copy .hero-description {
+        margin: 0;
+    }
+
+    .time-tags {
+        justify-content: flex-start;
+        margin: 0;
+    }
+
+    .clock-shell {
+        width: 100%;
+        grid-template-columns: minmax(0, 1fr) 190px;
+        justify-items: stretch;
+        padding: 24px;
+    }
+
+    .digital-time {
+        font-size: 4rem;
+    }
+
+    .clock-face {
+        width: 184px;
+    }
+
+    .time-media-wall {
+        grid-template-columns: 1fr;
+    }
+
+    .time-portrait-card {
+        width: 100%;
+        min-height: 420px;
+    }
+
+    .friend-reviews-header {
+        display: block;
+        text-align: left;
+    }
+
+    .friend-reviews-header .time-badge {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .friend-reviews-header p {
+        margin-left: 0;
+    }
+
+    .review-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 640px) {
+    .time-main {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .time-hero {
+        padding-top: 92px;
+        gap: 18px;
+    }
+
+    .time-copy {
+        padding: 22px;
+        border-radius: 28px;
+        gap: 18px;
+    }
+
+    .time-copy .hero-title {
+        font-size: 2.72rem;
+        white-space: nowrap;
+    }
+
+    .time-copy .hero-description {
+        font-size: 0.96rem;
+    }
+
+    .time-tags span {
+        min-height: 32px;
+        font-size: 0.76rem;
+    }
+
+    .time-lines {
+        display: grid;
+        grid-template-columns: 1fr;
+        padding: 14px;
+    }
+
+    .time-lines p {
+        min-height: 38px;
+    }
+
+    .clock-shell {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        border-radius: 28px;
+        gap: 14px;
+    }
+
+    .clock-header {
+        order: 1;
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .time-panel {
+        order: 2;
+        grid-column: 1;
+        text-align: center;
+        padding-top: 0;
+    }
+
+    .digital-time {
+        margin: 9px 0 8px;
+        font-size: 2.66rem;
+    }
+
+    .date-line {
+        margin-bottom: 6px;
+        font-size: 0.94rem;
+    }
+
+    .clock-face {
+        order: 3;
+        grid-column: 1;
+        grid-row: auto;
+        justify-self: center;
+        width: min(176px, 54vw);
+    }
+
+    .time-facts {
+        order: 5;
+        grid-template-columns: 1fr;
+    }
+
+    .time-fact {
+        min-height: 64px;
+    }
+
+    .delay-control,
+    .clock-note,
+    .time-facts {
+        grid-column: 1;
+    }
+
+    .delay-control {
+        order: 4;
+        padding: 14px;
+    }
+
+    .clock-note {
+        order: 6;
+    }
+
+    .time-portrait-card {
+        min-height: 360px;
+    }
+
+    .time-quote-card img {
+        min-height: 280px;
+    }
+
+    .friend-reviews {
+        padding-bottom: 72px;
+    }
+
+    .friend-reviews-header h2 {
+        font-size: 2rem;
+    }
+
+    .review-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Minimalist fade-in animation for load */
 .fade-up {
     animation: fadeUp 0.6s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;

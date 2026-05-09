@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23D97757' d='M12 0C12.5 5.5 16.5 9.5 22 10V14C16.5 14.5 12.5 18.5 12 24H10C9.5 18.5 5.5 14.5 0 14V10C5.5 9.5 9.5 5.5 10 0H12Z'/%3E%3C/svg%3E">
-    <link rel="stylesheet" href="../styles.css?v=hero-clock">
+    <link rel="stylesheet" href="../styles.css?v=time-redesign">
 </head>
 <body class="time-page">
     <nav class="navbar">
@@ -41,80 +41,84 @@
                 <div class="globe-orbit orbit-two"></div>
             </div>
 
-            <div class="time-copy">
-                <div class="hero-badge time-badge" id="timezoneBadge">UTC+7 · China - 1h</div>
-                <h1 id="time-title" class="hero-title">何苇杭标准时</h1>
-                <p class="hero-description">
-                    中国标准时间减一小时。专为迟到大王、缓冲型人格、以及所有“马上到”的经典时刻校准。
-                </p>
-                <div class="time-tags" aria-label="何苇杭标准时标签">
-                    <span>迟到大王</span>
-                    <span>迟到一小时就是准时</span>
-                    <span>没有时间观念</span>
-                    <span>慢一小时出发</span>
-                    <span>北京时间仅供参考</span>
-                    <span>马上到但还没出门</span>
-                    <span>DDL 友好型人格</span>
-                    <span>时间观念离线</span>
-                </div>
-                <div class="time-lines" aria-label="何苇杭经典台词">
-                    <span>经典台词</span>
-                    <p>“包的兄弟马上到”</p>
-                    <p>“来了来了”</p>
-                    <p>“怎么可能迟到”</p>
-                    <p>“已经在路上了”</p>
-                </div>
-                <div class="time-facts" aria-label="何苇杭标准时参数">
-                    <div class="time-fact">
-                        <span>时区偏移</span>
-                        <strong id="offsetFact">-01:00</strong>
-                    </div>
-                    <div class="time-fact">
-                        <span>准点概率</span>
-                        <strong id="punctualityFact">随缘</strong>
-                    </div>
-                    <div class="time-fact">
-                        <span>到达状态</span>
-                        <strong id="arrivalFact">马上</strong>
-                    </div>
-                </div>
-            </div>
-
-            <div class="clock-shell" aria-label="何苇杭标准时时钟">
-                <div class="clock-header">
-                    <span>HE WEIHANG STANDARD TIME</span>
-                    <strong id="clockOffset">-1H</strong>
-                </div>
-                <div class="clock-face">
-                    <div class="clock-mark mark-12">12</div>
-                    <div class="clock-mark mark-3">3</div>
-                    <div class="clock-mark mark-6">6</div>
-                    <div class="clock-mark mark-9">9</div>
-                    <div class="clock-hand hour-hand" id="hourHand"></div>
-                    <div class="clock-hand minute-hand" id="minuteHand"></div>
-                    <div class="clock-hand second-hand" id="secondHand"></div>
-                    <div class="clock-pin"></div>
+            <div class="time-hero-stage">
+                <div class="time-copy">
+                    <div class="hero-badge time-badge" id="timezoneBadge">UTC+7 · China - 1h</div>
+                    <h1 id="time-title" class="hero-title">何苇杭标准时</h1>
+                    <p class="hero-description">
+                        中国标准时间减一小时。专为迟到大王、缓冲型人格、以及所有“马上到”的经典时刻校准。
+                    </p>
                 </div>
 
-                <div class="time-panel">
-                    <div class="timezone-label">何苇杭标准时现在是</div>
-                    <time id="digitalTime" class="digital-time" datetime="">--:--:--</time>
-                    <div id="dateLine" class="date-line">正在校准时间...</div>
-                    <div id="chinaTime" class="china-time">中国时间 --:--:--</div>
-                </div>
-                <div class="delay-control" aria-label="何苇杭标准时延时调节">
-                    <div class="delay-control-top">
-                        <label for="delaySlider">自助延时</label>
-                        <output id="delayValue" for="delaySlider">慢 1 小时</output>
+                <div class="clock-shell" aria-label="何苇杭标准时时钟">
+                    <div class="clock-header">
+                        <span>HE WEIHANG STANDARD TIME</span>
+                        <strong id="clockOffset">-1H</strong>
                     </div>
-                    <input type="range" id="delaySlider" min="0" max="180" step="5" value="60">
-                    <div class="delay-scale">
-                        <span>准时</span>
-                        <span>标准迟到</span>
-                        <span>深度缓冲</span>
+                    <div class="time-panel">
+                        <div class="timezone-label">何苇杭标准时现在是</div>
+                        <time id="digitalTime" class="digital-time" datetime="">--:--:--</time>
+                        <div id="dateLine" class="date-line">正在校准时间...</div>
+                        <div id="chinaTime" class="china-time">中国时间 --:--:--</div>
+                    </div>
+                    <div class="clock-face">
+                        <div class="clock-mark mark-12">12</div>
+                        <div class="clock-mark mark-3">3</div>
+                        <div class="clock-mark mark-6">6</div>
+                        <div class="clock-mark mark-9">9</div>
+                        <div class="clock-hand hour-hand" id="hourHand"></div>
+                        <div class="clock-hand minute-hand" id="minuteHand"></div>
+                        <div class="clock-hand second-hand" id="secondHand"></div>
+                        <div class="clock-pin"></div>
+                    </div>
+                    <div class="delay-control" aria-label="何苇杭标准时延时调节">
+                        <div class="delay-control-top">
+                            <label for="delaySlider">自助延时</label>
+                            <output id="delayValue" for="delaySlider">慢 1 小时</output>
+                        </div>
+                        <input type="range" id="delaySlider" min="0" max="180" step="5" value="60">
+                        <div class="delay-scale">
+                            <span>准时</span>
+                            <span>标准迟到</span>
+                            <span>深度缓冲</span>
+                        </div>
+                    </div>
+                    <div class="time-facts" aria-label="何苇杭标准时参数">
+                        <div class="time-fact">
+                            <span>时区偏移</span>
+                            <strong id="offsetFact">-01:00</strong>
+                        </div>
+                        <div class="time-fact">
+                            <span>准点概率</span>
+                            <strong id="punctualityFact">随缘</strong>
+                        </div>
+                        <div class="time-fact">
+                            <span>到达状态</span>
+                            <strong id="arrivalFact">马上</strong>
+                        </div>
+                    </div>
+                    <div class="clock-note" id="clockNote">慢一小时，稳定运行中</div>
+                </div>
+
+                <div class="time-context" aria-label="何苇杭标准时语境">
+                    <div class="time-tags" aria-label="何苇杭标准时标签">
+                        <span>迟到大王</span>
+                        <span>迟到一小时就是准时</span>
+                        <span>没有时间观念</span>
+                        <span>慢一小时出发</span>
+                        <span>北京时间仅供参考</span>
+                        <span>马上到但还没出门</span>
+                        <span>DDL 友好型人格</span>
+                        <span>时间观念离线</span>
+                    </div>
+                    <div class="time-lines" aria-label="何苇杭经典台词">
+                        <span>经典台词</span>
+                        <p>“包的兄弟马上到”</p>
+                        <p>“来了来了”</p>
+                        <p>“怎么可能迟到”</p>
+                        <p>“已经在路上了”</p>
                     </div>
                 </div>
-                <div class="clock-note" id="clockNote">慢一小时，稳定运行中</div>
             </div>
 
             <div class="time-media-wall" aria-label="何苇杭标准时主题素材">
