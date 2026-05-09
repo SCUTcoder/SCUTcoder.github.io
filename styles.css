@@ -415,6 +415,11 @@ code, .badge {
     align-items: end;
 }
 
+.time-copy,
+.time-context {
+    grid-column: 1;
+}
+
 .time-copy .time-badge {
     grid-column: 1;
 }
@@ -1725,38 +1730,27 @@ code, .badge {
     display: grid;
     grid-template-columns: minmax(0, 0.82fr) minmax(520px, 1.18fr);
     gap: 28px;
-    align-items: stretch;
+    align-items: start;
 }
 
 .time-copy {
-    min-height: 430px;
-    padding: 34px;
+    min-height: 0;
+    padding: 12px 0 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content: center;
-    gap: 26px;
-    border: 1px solid var(--time-line);
-    border-radius: 36px;
-    background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.62)),
-        rgba(255, 255, 255, 0.72);
-    box-shadow: var(--time-shadow);
-    backdrop-filter: blur(28px);
-    -webkit-backdrop-filter: blur(28px);
+    justify-content: flex-start;
+    gap: 22px;
+    border: none;
+    border-radius: 0;
+    background: transparent;
+    box-shadow: none;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
 }
 
 .time-copy::after {
-    content: "UTC+7";
-    position: absolute;
-    right: 28px;
-    bottom: 22px;
-    color: rgba(10, 132, 255, 0.08);
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 4.8rem;
-    font-weight: 500;
-    line-height: 1;
-    pointer-events: none;
+    content: none;
 }
 
 .time-copy .time-badge {
@@ -1795,15 +1789,15 @@ code, .badge {
 }
 
 .time-context {
-    grid-column: 1 / -1;
+    width: 100%;
     display: grid;
-    grid-template-columns: minmax(0, 0.94fr) minmax(360px, 0.76fr);
-    gap: 16px;
+    grid-template-columns: 1fr;
+    gap: 14px;
     align-items: stretch;
 }
 
 .time-tags {
-    max-width: 560px;
+    max-width: 100%;
     display: flex;
     flex-wrap: wrap;
     gap: 8px;
@@ -1840,13 +1834,13 @@ code, .badge {
     width: 100%;
     max-width: none;
     margin-top: 0;
-    padding: 18px;
+    padding: 16px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 10px;
     border: 1px solid rgba(16, 20, 24, 0.08);
     border-radius: 26px;
-    background: rgba(248, 250, 252, 0.72);
+    background: rgba(255, 255, 255, 0.52);
     box-shadow: none;
 }
 
@@ -1878,6 +1872,8 @@ code, .badge {
 }
 
 .clock-shell {
+    grid-column: 2;
+    grid-row: 1 / span 2;
     min-height: 430px;
     margin-top: 0;
     padding: 28px;
@@ -2181,6 +2177,16 @@ code, .badge {
     }
 
     .time-copy,
+    .time-context,
+    .clock-shell {
+        grid-column: 1;
+    }
+
+    .clock-shell {
+        grid-row: auto;
+    }
+
+    .time-copy,
     .clock-shell {
         min-height: auto;
     }
@@ -2212,7 +2218,7 @@ code, .badge {
     }
 
     .time-copy {
-        padding: 26px;
+        padding: 0;
         align-items: flex-start;
         text-align: left;
     }
@@ -2286,7 +2292,7 @@ code, .badge {
     }
 
     .time-copy {
-        padding: 22px;
+        padding: 0;
         border-radius: 28px;
         gap: 18px;
     }
