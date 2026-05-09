@@ -1733,6 +1733,20 @@ code, .badge {
     align-items: start;
 }
 
+.time-orbit-art {
+    position: absolute;
+    left: -260px;
+    top: 110px;
+    width: 720px;
+    height: auto;
+    opacity: 0.22;
+    pointer-events: none;
+    user-select: none;
+    mix-blend-mode: multiply;
+    filter: saturate(0.95) blur(0.1px);
+    z-index: -1;
+}
+
 .time-copy {
     min-height: 0;
     padding: 12px 0 0;
@@ -1840,7 +1854,9 @@ code, .badge {
     gap: 10px;
     border: 1px solid rgba(16, 20, 24, 0.08);
     border-radius: 26px;
-    background: rgba(255, 255, 255, 0.52);
+    background: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
     box-shadow: none;
 }
 
@@ -2204,6 +2220,14 @@ code, .badge {
     .time-media-wall {
         grid-template-columns: minmax(220px, 0.48fr) minmax(0, 1fr);
     }
+
+    .time-orbit-art {
+        left: auto;
+        right: -250px;
+        top: 32px;
+        width: 620px;
+        opacity: 0.14;
+    }
 }
 
 @media (max-width: 900px) {
@@ -2242,6 +2266,13 @@ code, .badge {
         grid-template-columns: minmax(0, 1fr) 190px;
         justify-items: stretch;
         padding: 24px;
+    }
+
+    .time-orbit-art {
+        right: -220px;
+        top: 56px;
+        width: 540px;
+        opacity: 0.12;
     }
 
     .digital-time {
@@ -2289,6 +2320,13 @@ code, .badge {
     .time-hero {
         padding-top: 92px;
         gap: 18px;
+    }
+
+    .time-orbit-art {
+        right: -210px;
+        top: 112px;
+        width: 430px;
+        opacity: 0.1;
     }
 
     .time-copy {
