@@ -869,10 +869,57 @@ code, .badge {
     font-size: 0.78rem;
 }
 
+.time-quote-section {
+    position: relative;
+    z-index: 1;
+    padding: 0 0 92px;
+    display: grid;
+    grid-template-columns: minmax(300px, 0.74fr) minmax(460px, 1fr);
+    gap: 52px;
+    align-items: center;
+}
+
+.time-quote-copy h2 {
+    max-width: 500px;
+    margin-bottom: 18px;
+    color: var(--time-ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: clamp(2.45rem, 3.8vw, 3.45rem);
+    font-weight: 600;
+    line-height: 1.02;
+    letter-spacing: 0;
+}
+
+.time-quote-copy p {
+    max-width: 430px;
+    margin: 0;
+    color: var(--time-muted);
+    font-size: 1.08rem;
+    line-height: 1.7;
+}
+
+.time-quote-card {
+    margin: 0;
+    padding: 10px;
+    border: 1px solid var(--time-line);
+    border-radius: 34px;
+    background: var(--time-surface-strong);
+    box-shadow: var(--time-shadow);
+    backdrop-filter: blur(24px);
+    -webkit-backdrop-filter: blur(24px);
+}
+
+.time-quote-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 24px;
+}
+
 .friend-reviews {
     position: relative;
     z-index: 1;
-    padding: 12px 0 104px;
+    padding: 0 0 104px;
     border-top: none;
 }
 
@@ -1443,6 +1490,18 @@ code, .badge {
         margin-right: auto;
     }
 
+    .time-quote-section {
+        grid-template-columns: 1fr;
+        gap: 34px;
+        text-align: center;
+    }
+
+    .time-quote-copy h2,
+    .time-quote-copy p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .review-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
@@ -1599,6 +1658,23 @@ code, .badge {
 
     .friend-reviews {
         padding-bottom: 72px;
+    }
+
+    .time-quote-section {
+        padding-bottom: 66px;
+    }
+
+    .time-quote-copy h2 {
+        font-size: 2.42rem;
+    }
+
+    .time-quote-card {
+        padding: 7px;
+        border-radius: 24px;
+    }
+
+    .time-quote-card img {
+        border-radius: 18px;
     }
 
     .friend-reviews-header h2 {
