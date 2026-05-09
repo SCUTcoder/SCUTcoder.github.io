@@ -1735,16 +1735,25 @@ code, .badge {
 
 .time-orbit-art {
     position: absolute;
-    left: -260px;
-    top: 110px;
-    width: 720px;
+    left: -250px;
+    top: 6px;
+    width: 820px;
     height: auto;
-    opacity: 0.22;
+    opacity: 0.24;
     pointer-events: none;
     user-select: none;
-    mix-blend-mode: multiply;
-    filter: saturate(0.95) blur(0.1px);
+    mix-blend-mode: normal;
+    filter: saturate(0.92) contrast(0.96);
     z-index: -1;
+    border-radius: 42px;
+    mask-image:
+        linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.8) 12%, rgba(0, 0, 0, 0.62) 58%, transparent 100%),
+        linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.78) 14%, rgba(0, 0, 0, 0.62) 74%, transparent 100%);
+    mask-composite: intersect;
+    -webkit-mask-image:
+        linear-gradient(90deg, transparent 0%, rgba(0, 0, 0, 0.8) 12%, rgba(0, 0, 0, 0.62) 58%, transparent 100%),
+        linear-gradient(180deg, transparent 0%, rgba(0, 0, 0, 0.78) 14%, rgba(0, 0, 0, 0.62) 74%, transparent 100%);
+    -webkit-mask-composite: source-in;
 }
 
 .time-copy {
@@ -2223,10 +2232,10 @@ code, .badge {
 
     .time-orbit-art {
         left: auto;
-        right: -250px;
-        top: 32px;
-        width: 620px;
-        opacity: 0.14;
+        right: -300px;
+        top: 12px;
+        width: 720px;
+        opacity: 0.12;
     }
 }
 
@@ -2269,10 +2278,10 @@ code, .badge {
     }
 
     .time-orbit-art {
-        right: -220px;
-        top: 56px;
-        width: 540px;
-        opacity: 0.12;
+        right: -260px;
+        top: 54px;
+        width: 600px;
+        opacity: 0.1;
     }
 
     .digital-time {
@@ -2323,10 +2332,10 @@ code, .badge {
     }
 
     .time-orbit-art {
-        right: -210px;
-        top: 112px;
-        width: 430px;
-        opacity: 0.1;
+        right: -220px;
+        top: 120px;
+        width: 470px;
+        opacity: 0.09;
     }
 
     .time-copy {
