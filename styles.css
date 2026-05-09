@@ -47,7 +47,7 @@ body {
 h1, h2, h3, h4, .nav-logo {
     font-family: 'Lora', Georgia, serif;
     color: var(--text-primary);
-    letter-spacing: -0.01em;
+    letter-spacing: 0;
 }
 
 code, .badge {
@@ -226,10 +226,11 @@ code, .badge {
 
 /* Hero Section */
 .hero {
-    padding: 180px 0 100px;
+    min-height: 100vh;
+    padding: 150px 0 96px;
     display: grid;
-    grid-template-columns: 1.2fr 1fr;
-    gap: 64px;
+    grid-template-columns: minmax(0, 1.1fr) minmax(360px, 0.9fr);
+    gap: 72px;
     align-items: center;
     border-bottom: 1px solid var(--border-light);
 }
@@ -246,11 +247,32 @@ code, .badge {
     font-family: 'JetBrains Mono', monospace;
 }
 
+.hero-name {
+    margin-bottom: 12px;
+    color: var(--text-primary);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 7rem;
+    font-weight: 600;
+    line-height: 0.9;
+    letter-spacing: 0;
+}
+
+.hero-subtitle {
+    margin-bottom: 28px;
+    color: var(--anthropic-terracotta);
+    font-size: 1.24rem;
+    font-weight: 500;
+    line-height: 1.35;
+}
+
 .hero-title {
-    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    max-width: 720px;
+    font-size: 3.45rem;
     font-weight: 400;
-    line-height: 1.15;
+    line-height: 1.12;
     margin-bottom: 24px;
+    text-wrap: nowrap;
+    white-space: nowrap;
 }
 
 .hero-description {
@@ -264,50 +286,6 @@ code, .badge {
 .hero-actions {
     display: flex;
     gap: 16px;
-}
-
-.hwh-quote-showcase {
-    padding: 92px 0;
-    display: grid;
-    grid-template-columns: minmax(280px, 0.74fr) minmax(420px, 1fr);
-    gap: 56px;
-    align-items: center;
-    border-bottom: 1px solid var(--border-light);
-}
-
-.hwh-quote-copy h2 {
-    max-width: 540px;
-    margin-bottom: 18px;
-    font-size: clamp(2.3rem, 5vw, 4rem);
-    font-weight: 400;
-    line-height: 1.06;
-    letter-spacing: 0;
-}
-
-.hwh-quote-copy p {
-    max-width: 440px;
-    margin-bottom: 30px;
-    color: var(--text-secondary);
-    font-size: 1.08rem;
-    line-height: 1.72;
-}
-
-.hwh-quote-frame {
-    margin: 0;
-    padding: 10px;
-    border: 1px solid rgba(0, 0, 0, 0.06);
-    border-radius: 28px;
-    background:
-        linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.62)),
-        #f5f5f7;
-    box-shadow: 0 34px 90px rgba(0, 0, 0, 0.1);
-}
-
-.hwh-quote-frame img {
-    display: block;
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
 }
 
 /* He Weihang Time */
@@ -1374,7 +1352,8 @@ code, .badge {
 @media (max-width: 900px) {
     .hero {
         grid-template-columns: 1fr;
-        padding: 140px 0 80px;
+        min-height: auto;
+        padding: 128px 0 80px;
         text-align: center;
     }
 
@@ -1384,18 +1363,6 @@ code, .badge {
 
     .hero-actions {
         justify-content: center;
-    }
-
-    .hwh-quote-showcase {
-        grid-template-columns: 1fr;
-        padding: 72px 0;
-        gap: 36px;
-        text-align: center;
-    }
-
-    .hwh-quote-copy p {
-        margin-left: auto;
-        margin-right: auto;
     }
 
     .split-section {
@@ -1569,6 +1536,25 @@ code, .badge {
         justify-content: center;
     }
 
+    .hero {
+        padding: 112px 0 72px;
+    }
+
+    .hero-name {
+        font-size: 4.2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
+    .hero-title {
+        font-size: 1.62rem;
+        line-height: 1.16;
+        white-space: nowrap;
+        text-wrap: nowrap;
+    }
+
     .time-globe {
         top: 86px;
         width: min(360px, 92vw);
@@ -1693,19 +1679,6 @@ code, .badge {
 
     .review-card {
         min-height: auto;
-    }
-
-    .hwh-quote-showcase {
-        padding: 58px 0;
-    }
-
-    .hwh-quote-frame {
-        padding: 7px;
-        border-radius: 22px;
-    }
-
-    .hwh-quote-frame img {
-        border-radius: 16px;
     }
 }
 
