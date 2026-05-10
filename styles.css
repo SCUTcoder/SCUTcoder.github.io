@@ -1716,18 +1716,18 @@ code, .badge {
 .time-page::before {
     z-index: -2;
     background-image: url("time/assets/earth-time-center.webp");
-    background-size: cover;
-    background-position: center top;
+    background-size: min(1380px, 96vw) auto;
+    background-position: left top;
     background-repeat: no-repeat;
-    opacity: 0.34;
-    filter: saturate(0.9) contrast(0.96);
+    opacity: 0.72;
+    filter: saturate(1.02) contrast(0.98);
 }
 
 .time-page::after {
     z-index: -1;
     background:
-        linear-gradient(90deg, rgba(246, 249, 252, 0.72) 0%, rgba(246, 249, 252, 0.58) 42%, rgba(246, 249, 252, 0.82) 100%),
-        linear-gradient(180deg, rgba(246, 249, 252, 0.58) 0%, rgba(246, 249, 252, 0.86) 54%, rgba(255, 255, 255, 0.96) 100%);
+        linear-gradient(90deg, rgba(246, 249, 252, 0.34) 0%, rgba(246, 249, 252, 0.3) 34%, rgba(246, 249, 252, 0.72) 62%, rgba(246, 249, 252, 0.88) 100%),
+        linear-gradient(180deg, rgba(246, 249, 252, 0.24) 0%, rgba(246, 249, 252, 0.62) 44%, rgba(255, 255, 255, 0.94) 100%);
 }
 
 .time-page .navbar {
@@ -2270,8 +2270,9 @@ code, .badge {
     }
 
     .time-page::before {
-        opacity: 0.22;
-        background-position: 35% top;
+        opacity: 0.44;
+        background-size: 980px auto;
+        background-position: 30% top;
     }
 
     .digital-time {
@@ -2322,14 +2323,15 @@ code, .badge {
     }
 
     .time-page::before {
-        opacity: 0.18;
-        background-position: 32% top;
+        opacity: 0.32;
+        background-size: 780px auto;
+        background-position: 28% top;
     }
 
     .time-page::after {
         background:
-            linear-gradient(90deg, rgba(246, 249, 252, 0.82) 0%, rgba(246, 249, 252, 0.7) 45%, rgba(246, 249, 252, 0.88) 100%),
-            linear-gradient(180deg, rgba(246, 249, 252, 0.66) 0%, rgba(246, 249, 252, 0.9) 48%, rgba(255, 255, 255, 0.97) 100%);
+            linear-gradient(90deg, rgba(246, 249, 252, 0.6) 0%, rgba(246, 249, 252, 0.58) 45%, rgba(246, 249, 252, 0.84) 100%),
+            linear-gradient(180deg, rgba(246, 249, 252, 0.42) 0%, rgba(246, 249, 252, 0.78) 48%, rgba(255, 255, 255, 0.96) 100%);
     }
 
     .time-copy {
